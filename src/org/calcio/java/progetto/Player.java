@@ -32,7 +32,9 @@ BONUS: nella classe Persona, al posto dell’età, memorizzare la data di nascit
         this.role = role;
     }
 
-    public int playerAge(){
-        return random.nextInt(18, 41);
+    @Override
+    public String toString(){
+        return super.toString() + " " + role;
     }
+
 }

@@ -13,11 +13,16 @@ prelevare un ruolo casuale dall’array di possibili ruoli
 BONUS: nella classe Persona, al posto dell’età, memorizzare la data di nascita
      */
     //attributi
-    boolean strategy;
+    String strategy;
 
     //costruttore
-    public Trainer(String name, int age, boolean strategy) {
+    public Trainer(String name, int age, String strategy) {
         super(name, age);
         this.strategy = strategy;
+    }
+
+    @Override
+    public String toString() {
+        return getName() + " ha " + getAge() + " anni e la sua strategia è " + strategy;
     }
 }

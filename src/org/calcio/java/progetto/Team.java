@@ -28,4 +28,21 @@ BONUS: nella classe Persona, al posto dell’età, memorizzare la data di nascit
     public void setPlayers(List<Player> players) {
         this.players = players;
     }
+
+    public void setTrainer(Trainer trainer){
+        this.trainer = trainer;
+    }
+
+    //aggiungere giocatori alla squadra
+    public void addPlayer(Player player){
+            players.add(player);
+    }
+
+    @Override
+    public String toString(){
+        return players.toString() + "\n" + "l'allenatore è " + trainer.toString();
+    }
+
+
+
 }

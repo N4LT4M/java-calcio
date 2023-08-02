@@ -42,7 +42,7 @@ BONUS: nella classe Persona, al posto dell’età, memorizzare la data di nascit
 
     @Override
     public String toString (){
-        String person = name + " is " + age + " years old ";
+        String person = name + " " + age + " ";
         return  person;
     }
 }
