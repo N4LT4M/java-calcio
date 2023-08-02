@@ -1,5 +1,8 @@
 package org.calcio.java.progetto;
 
+import java.awt.*;
+import java.util.Random;
+
 public class Player extends Person {
     /*
     Creare una classe Persona con gli attributi nome ed età.
@@ -14,10 +17,22 @@ BONUS: nella classe Persona, al posto dell’età, memorizzare la data di nascit
      */
     //attributi
     String role;
-
+    Random random = new Random();
     //costruttore
     public Player(String name, int age, String role) {
         super(name, age);
         this.role = role;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public int playerAge(){
+        return random.nextInt(18, 40);
     }
 }

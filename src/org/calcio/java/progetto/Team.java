@@ -15,11 +15,17 @@ generare l’età in modo casuale
 prelevare un ruolo casuale dall’array di possibili ruoli
 BONUS: nella classe Persona, al posto dell’età, memorizzare la data di nascita
      */
-    private List<Player> players;
+    private List<Player> players = new ArrayList<>();
 
     private Trainer trainer;
 
-    public Team() {
-        players = new ArrayList<>();
+
+
+    public List<Player> getPlayers() {
+        return players;
+    }
+
+    public void setPlayers(List<Player> players) {
+        this.players = players;
     }
 }

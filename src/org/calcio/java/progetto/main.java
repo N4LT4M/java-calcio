@@ -20,6 +20,7 @@ BONUS: nella classe Persona, al posto dell’età, memorizzare la data di nascit
         String[] names = {"Marco Rossi", "Alessio Bianchi", "Luca Esposito", "Matteo Russo", "Andrea Martini", "Francesco Conti", "Davide Romano", "Simone Marino", "Giorgio Ferrari", "Federico Greco", "Lorenzo Barbieri", "Alessandro Fontana", "Giovanni Santoro", "Riccardo Rizzo", "Stefano Caruso", "Nicola Lombardi", "Filippo Moretti", "Emanuele Giordano", "Maurizio Marchetti", "Fabio Monti"};
         String[] roles = {"portiere", "difensore", "centrocampista", "attaccante"};
 
+
         Random random = new Random();
         //random.nextInt(0, names.length);
         for (int i = 0; i < 11; i++) {
