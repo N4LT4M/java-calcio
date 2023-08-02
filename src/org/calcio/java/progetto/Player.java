@@ -33,6 +33,6 @@ BONUS: nella classe Persona, al posto dell’età, memorizzare la data di nascit
     }
 
     public int playerAge(){
-        return random.nextInt(18, 40);
+        return random.nextInt(18, 41);
     }
 }
