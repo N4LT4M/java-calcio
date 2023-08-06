@@ -104,7 +104,6 @@ Invocare il metodo per iniziare la partita, segnare qualche goal e concludere la
             }
             System.out.println("la partita è finita, sono stati segnati " + match.goals + " goal");
 
-
         } else if (startMatch.equalsIgnoreCase("N")) {
             System.out.println("la partita è annullata");
         } else {
