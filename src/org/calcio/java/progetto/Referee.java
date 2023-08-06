@@ -1,11 +1,8 @@
 package org.calcio.java.progetto;
 
-import java.awt.*;
-import java.util.Random;
-
-public class Player extends Person {
-    /*
- Creare una classe Persona con gli attributi nome ed età.
+public class Referee extends Person {
+        /*
+    Creare una classe Persona con gli attributi nome ed età.
 Estendere la classe Persona con una classe Giocatore e una classe Allenatore: ogni giocatore ha un ruolo e ogni allenatore ha la sua strategia (es: difensiva o offensiva).
 Definire una classe Squadra che contiene una lista di oggetti di tipo Giocatore e un Allenatore.
 Creare infine una classe Main e definire al suo interno un array di nomi e un array con i possibili ruoli per i giocatori.
@@ -27,12 +24,11 @@ NB: non è possibile segnare un goal se la partita non è ancora iniziata!
 In questo caso il sistema deve restituire un messaggio d’errore.
 Nel metodo main, istanziare 2 oggetti di tipo Squadra e creare una Partita.
 Invocare il metodo per iniziare la partita, segnare qualche goal e concludere la partita.
-  */
-    //attributi
+     */
+
     String role;
-    Random random = new Random();
-    //costruttore
-    public Player(String name, int age, String role) {
+
+    public Referee(String name, int age, String role) {
         super(name, age);
         this.role = role;
     }
@@ -44,10 +40,4 @@ Invocare il metodo per iniziare la partita, segnare qualche goal e concludere la
     public void setRole(String role) {
         this.role = role;
     }
-
-    @Override
-    public String toString(){
-        return super.toString() + " " + role;
-    }
-
 }

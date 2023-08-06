@@ -1,11 +1,11 @@
 package org.calcio.java.progetto;
 
-import java.awt.*;
 import java.util.Random;
+import java.util.Scanner;
 
-public class Player extends Person {
-    /*
- Creare una classe Persona con gli attributi nome ed età.
+public class Match {
+        /*
+    Creare una classe Persona con gli attributi nome ed età.
 Estendere la classe Persona con una classe Giocatore e una classe Allenatore: ogni giocatore ha un ruolo e ogni allenatore ha la sua strategia (es: difensiva o offensiva).
 Definire una classe Squadra che contiene una lista di oggetti di tipo Giocatore e un Allenatore.
 Creare infine una classe Main e definire al suo interno un array di nomi e un array con i possibili ruoli per i giocatori.
@@ -27,27 +27,59 @@ NB: non è possibile segnare un goal se la partita non è ancora iniziata!
 In questo caso il sistema deve restituire un messaggio d’errore.
 Nel metodo main, istanziare 2 oggetti di tipo Squadra e creare una Partita.
 Invocare il metodo per iniziare la partita, segnare qualche goal e concludere la partita.
-  */
+     */
     //attributi
-    String role;
-    Random random = new Random();
+    private Referee referee;
+
+    private Team homeTeam;
+    private Team awayTeam;
+    private boolean matchIsStarted;
+    int goals;
+
+
     //costruttore
-    public Player(String name, int age, String role) {
-        super(name, age);
-        this.role = role;
+    public Match (Referee referee, Team homeTeam, Team awayTeam){
+        this.referee = referee;
+        this.homeTeam = homeTeam;
+        this.awayTeam = awayTeam;
+        this.matchIsStarted = false;
+        this.goals = 0;
     }
 
-    public String getRole() {
-        return role;
+    //metodo per iniziare la partita
+    public void matchStart(){
+        matchIsStarted = true;
+        System.out.println("the match has begun");
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    //metodo per fare goal
+    public int goalScored(){
+        if (!matchIsStarted){
+            System.out.println("the match is not begun, impossible to score goal");
+        }
+        Random random = new Random();
+        boolean someoneScored = random.nextBoolean();
+        boolean homeTeamScored = random.nextBoolean();
+        if (someoneScored) {
+            if (homeTeamScored) {
+                System.out.println(homeTeam.getName() + " ha segnato");
+            } else {
+                System.out.println(awayTeam.getName() + " ha segnato");
+            }
+            return goals++;
+
+        } else {
+            System.out.print("nessuno ha segnato, i goal fatti restano: " + goals);
+        }
+
+
+
     }
 
-    @Override
-    public String toString(){
-        return super.toString() + " " + role;
+    /*@Override
+    public String toString() {
+        return " hanno segnato " + goals + "goal, complimenti, bella partita";
     }
+*/
 
 }
