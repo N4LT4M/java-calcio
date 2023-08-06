@@ -55,7 +55,7 @@ Invocare il metodo per iniziare la partita, segnare qualche goal e concludere la
     //metodo per fare goal
     public int goalScored(){
         if (!matchIsStarted){
-            System.out.println("the match is not begun, impossible to score goal");
+            System.out.println("la partita non è iniziata, impossibile fare goal");
         }
         Random random = new Random();
         boolean someoneScored = random.nextBoolean();
@@ -69,7 +69,8 @@ Invocare il metodo per iniziare la partita, segnare qualche goal e concludere la
             return goals++;
 
         } else {
-            System.out.print("nessuno ha segnato, i goal fatti restano: " + goals);
+            System.out.println("Nessuno ha segnato, i goal fatti restano: " + goals);
+            return goals;  // Restituisce il valore attuale di goals
         }
 
 
